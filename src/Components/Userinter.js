@@ -1,9 +1,9 @@
 import React from "react";
 import FloatingDiv from "./FloatingDiv";
 
-export default function Userinter() {
+export default function Userinter({ traChk }) {
   return (
-    <div className="row">
+    <div className="row justify-content-between">
       <div className="col-12 col-md-3 d-none d-md-block d-lg-block d-xl-block text-center mt-5 fs-3 pl-5">
         1-HTML5
         <br />
@@ -42,13 +42,10 @@ export default function Userinter() {
           />
         </div>
       </div>
-      <div className="col-12 col-md-5 p-0 d-none d-md-block d-lg-block d-xl-block text-center mt-5 fs-3 mb-md-3">
-        Front End/UI Developer with overall 2 years of extensive experience in
-        the Manufacturing domain, with experience in the software development
-        lifecycle (SDLC) in developing and designing user experiences of
-        Internet/Intranet applications using HTML5, HTML, XHTML XML CSS, CSS3,
-        PHP, JavaScript, jQuery MeetingW3C standards. Excellent analytical and
-        logical programming skills.
+      <div className="col-12 col-md-4 p-0 d-none d-md-block d-lg-block d-xl-block text-center mt-5 fs-3 mb-md-3">
+        {traChk
+          ? "Je suis développeur front-end/UI avec une expérience globale de 2 ans dans le domaine de la fabrication, avec une expérience dans le cycle de vie du développement logiciel (SDLC) dans le développement et la conception d'expériences utilisateur d'applications Internet/Intranet utilisant HTML5, HTML, XHTML XML CSS, CSS3 , PHP, JavaScript, jQuery Respectant les normes W3C. Excellentes compétences en programmation analytique et logique."
+          : " I am front End/UI Developer with overall 2 years of extensive experience  in the Manufacturing domain, with experience in the software development lifecycle (SDLC) in developing and designing user experiences of Internet/Intranet applications using HTML5, HTML, XHTML XML CSS, CSS3,PHP, JavaScript, jQuery MeetingW3C standards. Excellent analytical and logical programming skills."}
       </div>
     </div>
   );

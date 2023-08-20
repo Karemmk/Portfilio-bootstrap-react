@@ -33,9 +33,8 @@
 
 .navbar-light .navbar-toggler-icon {
   background-image: url("https://res.cloudinary.com/dyx1jeydm/image/upload/v1661929365/Nabbar/toggle_xlmfjm.png") !important;
- scale: 2.6;
+  scale: 2.6;
   width: 20px;
-  
 }
 .btn.active {
   color: white;
@@ -112,4 +111,18 @@
   left: 0;
   width: 100%;
   overflow: hidden;
+}
+.panel-content {
+  object-fit: contain;
+}
+
+select {
+  background-color: rgba(255, 166, 0, 0.803);
+  border-radius: 15px;
+}
+select option {
+  background: red important;
+}
+a {
+  text-decoration: none;
 }

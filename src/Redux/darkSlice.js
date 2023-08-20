@@ -10,8 +10,10 @@ export const darkSlice = createSlice({
   reducers: {
     nezla: (state) => {
       state.value = !state.value;
-    }
+    },
+   
   }
 });
 export const { nezla } = darkSlice.actions;
 export default darkSlice.reducer;
+

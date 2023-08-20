@@ -1,8 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import darkReducer from "./darkSlice";
+import transReducer from "./transSlice";
 
 export const store = configureStore({
   reducer: {
-    darkMode: darkReducer
+    darkMode: darkReducer,
+    translate: transReducer
   }
 });

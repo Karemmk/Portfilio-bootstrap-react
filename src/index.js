@@ -1,10 +1,9 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "font-awesome/css/font-awesome.css";
 import "bootstrap-social/bootstrap-social.css";
-import {store} from "./Redux/Store";
-import {Provider} from "react-redux";
+import { store } from "./Redux/Store";
+import { Provider } from "react-redux";
 import App from "./App";
 
 const rootElement = document.getElementById("root");
@@ -12,8 +11,8 @@ const root = createRoot(rootElement);
 
 root.render(
   <StrictMode>
-     <Provider store={store}>
-        <App />
-     </Provider>
+    <Provider store={store}>
+      <App />
+    </Provider>
   </StrictMode>
 );

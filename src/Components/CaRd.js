@@ -1,10 +1,12 @@
 import React from "react";
 import { Button } from "reactstrap";
 import "../styles.css";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { Link } from "react-scroll";
 
 const CaRd = ({ image, title, text }) => {
+  const traChk = useSelector((state) => state.translate.value);
+
   const darkMode = useSelector((state) => state.darkMode.value);
   return (
     <div
@@ -20,7 +22,9 @@ const CaRd = ({ image, title, text }) => {
           <div className="fs-4 ">{title}</div>
           <div className="txt">{text}</div>
           <Link to="about" A spy={true} smooth={true}>
-            <Button className="bg-info b-none">learn more</Button>
+            <Button className="bg-info b-none">
+              {traChk ? "Puls d'info.." : "learn more"}
+            </Button>
           </Link>
         </div>
       </div>

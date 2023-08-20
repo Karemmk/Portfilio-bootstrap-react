@@ -5,8 +5,12 @@ import "../styles.css";
 import { motion } from "framer-motion/dist/framer-motion";
 import Typical from "react-typical";
 import { Link } from "react-scroll";
+import { useSelector } from "react-redux";
+import {BsFacebook,BsGithub,BsGoogle} from "react-icons/bs";
 
 const Home = () => {
+  const traChk = useSelector((state) => state.translate.value);
+  
   const transition = { duration: 2, type: "spring" };
   return (
     <div className="row position-relative ">
@@ -26,7 +30,7 @@ const Home = () => {
         ></div>
 
         <div className="mx-5">
-          <h3 className="fw-bold ">Hi! I am</h3>
+          <h3 className="fw-bold ">{traChk? 'Salut! je suis':'Hi! I am'}</h3>
           <h2 className="fw-bold text-warning fs-1">Karem Mkacher</h2>
           <p>
             <Typical
@@ -38,7 +42,8 @@ const Home = () => {
                 1000,
                 "Karem",
                 1000,
-                "full-stack",
+
+                "MERN-stack",
                 1000,
                 "web-developer",
                 1000
@@ -49,28 +54,37 @@ const Home = () => {
           <motion.div whileInView={{ x: 50 }} transition={{ duration: 1 }}>
             <Link to="contact" spy={true} smooth={true}>
               <Button className="mt-2 rounded-pill " color="warning">
-                Hire Me
+               {traChk?'Engagez moi': 'Hire Me'}
               </Button>
             </Link>
           </motion.div>
           <div className="col-12 d-flex mt-5 mb-5 ms-md-5">
             <a
+              target="_blank"
+              and
+              rel="noopener noreferrer"
               className="btn btn-social-icon btn-google btn-lg text-warning "
-              href="http://google.com/+"
+              href="mailto: karemmkach@gmail.com"
             >
-              <i className="fa fa-google-plus fa-lg"></i>
+              <BsGoogle className='mt-1'/>
             </a>
             <a
+              target="_blank"
+              and
+              rel="noopener noreferrer"
               className="btn btn-social-icon btn-github btn-lg mx-4 text-warning"
               href="https://github.com/Karemmk"
             >
-              <i className="fa fa-github fa-lg"></i>
+             <BsGithub className='mt-1'/>
             </a>
             <a
+              target="_blank"
+              and
+              rel="noopener noreferrer"
               className="btn btn-social-icon btn-facebook btn-lg text-warning"
               href="https://www.facebook.com/karem.mkacher"
             >
-              <i className="fa fa-facebook fa-lg"></i>
+              <BsFacebook className='mt-1'/>
             </a>
           </div>
         </div>
@@ -99,8 +113,8 @@ const Home = () => {
         <div className="offset-7 mt-md-5 ">
           <FloatingDiv
             image="https://res.cloudinary.com/dyx1jeydm/image/upload/v1661929086/Home/crown_gespiz.png"
-            text1="Web"
-            text2="Developer"
+            text1={traChk? "Développeur":"Web"}
+            text2={traChk?"Web" :"Developer"}
             condition={false}
           />
         </div>
@@ -119,8 +133,8 @@ const Home = () => {
         <div className="floatingdiv">
           <FloatingDiv
             image="https://res.cloudinary.com/dyx1jeydm/image/upload/v1661929087/Home/thumbup_w7imio.png"
-            text1="Web Desgin"
-            text2="Award"
+            text1={traChk? "Création de sites web":"Web Design"}
+            text2={traChk? "Accorder":"Award"}
             condition={false}
           />
         </div>

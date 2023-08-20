@@ -2,8 +2,11 @@ import React from "react";
 import { Button } from "reactstrap";
 import CaRd from "./CaRd";
 import { motion } from "framer-motion/dist/framer-motion";
+import { useSelector } from "react-redux";
 
 const Services = () => {
+  const traChk = useSelector((state) => state.translate.value);
+
   return (
     <div className="row mt-5 pt-5" id="services">
       <div className="col-12 col-md-5 text-center mt-5 pt-5 position-relative">
@@ -20,25 +23,31 @@ const Services = () => {
             left: "5%"
           }}
         ></div>
-        <h2 className="mt-5">My Awesome</h2>
+        <h2 className="mt-5">{traChk ? "Mon Génial" : "My Awesome"}</h2>
         <h3 className="text-warning">Services</h3>
         <span className="p-4">
-          This my services for front-end and back-end with reactjs for single
-          page app .
+          {traChk
+            ? "Ce sont mes services pour le front-end et le back-end avec reactjs pour une application à page unique."
+            : " This my services for front-end and back-end with reactjs for single page app ."}
         </span>
         <motion.div
-          whileInView={{ y: 90, scale: 1.5, duration: 3 }}
+          whileInView={{ y: 50, scale: 1.5, duration: 3 }}
           className="mt-2"
+          initial={{ y: -10 }}
         >
           <a
-            href="https://drive.google.com/file/d/1dTNOy-RYOnKa5Tq0kxtlR1gfceq-_UtT/view?usp=drivesdk"
+            href={
+              traChk
+              ? "https://drive.google.com/file/d/1Kbt1ydPTKZvxkK-RwyWb0Wfc-71Pe8cJ/view?usp=drivesdk"
+              : "https://drive.google.com/file/d/1KblqhiwcE2EdtbpgrQaUIvCAYA7z2O0Z/view?usp=drivesdk"  
+            }
             target="_blank"
             and
             rel="noopener noreferrer"
             download
           >
             <Button className="rounded-pill" color="warning">
-              Dowload CV
+              {traChk ? "Mon CV" : " My Resume"}
             </Button>
           </a>
         </motion.div>
@@ -66,7 +75,7 @@ const Services = () => {
           >
             <CaRd
               image="https://res.cloudinary.com/dyx1jeydm/image/upload/v1661929150/Services/heartemoji_ojpxfv.png"
-              title="Design"
+              title={traChk ? "Motif" : "Design"}
               text="Photoshop,Picart,Adobe,Adobe XD,Sigma,CSS,SCSS..."
             />
           </motion.div>
@@ -77,7 +86,7 @@ const Services = () => {
           >
             <CaRd
               image="https://res.cloudinary.com/dyx1jeydm/image/upload/v1661929150/Services/glasses_jdlqql.png"
-              title="Developer"
+              title={traChk ? "Développeur" : "Developer"}
               text="html,css,javascript,react,react-native,Nodejs,MongoDB..."
             />
           </motion.div>
@@ -88,7 +97,7 @@ const Services = () => {
             <CaRd
               image="https://res.cloudinary.com/dyx1jeydm/image/upload/v1661929150/Services/humble_sgbrpk.png"
               title="UI/UX"
-              text="Bootstrap,Reactstrap,Material UI,font-awesome..."
+              text="Bootstrap,Reactstrap,Material UI,Font-awesome,Bootstrap-social,Framer-Motion,Typical..."
             />
           </motion.div>
         </div>
