@@ -1,0 +1,128 @@
+.swiper-container {
+  width: 100%;
+  margin: 40px 0;
+  padding: 45px 0;
+}
+.swiper-slide {
+  opacity: 0.4;
+  overflow: hidden;
+  transition: 0.7s;
+}
+
+.swiper-slide img {
+  width: 100%;
+}
+
+.swiper-slide-active {
+  opacity: 1;
+  z-index: 1;
+}
+.floatingdiv {
+  margin-top: 60%;
+}
+.CardImage {
+  width: 20%;
+  height: 10%;
+}
+.txt {
+  word-break: break-word;
+}
+.test {
+  z-index: -9;
+}
+
+.navbar-light .navbar-toggler-icon {
+  background-image: url("https://res.cloudinary.com/dyx1jeydm/image/upload/v1661929365/Nabbar/toggle_xlmfjm.png") !important;
+  scale: 2.6;
+  width: 20px;
+}
+.btn.active {
+  color: white;
+  background: #1266f1 !important ;
+}
+.btn1:hover {
+  background: #1266f1 !important ;
+}
+
+.react-tabs {
+  display: flex;
+  margin-left: 9px;
+  border: 3px solid #ffc107;
+  border-left: none;
+  color: black;
+  border-radius: 20px;
+}
+
+.react-tabs__tab-list {
+  display: flex;
+  flex-direction: column;
+  width: 100px;
+  margin: 0;
+  padding: 0;
+  color: white;
+  background: gray;
+  border-radius: 20px;
+}
+
+.react-tabs__tab {
+  border-bottom: 1px solid orange;
+  list-style: none;
+  padding: 12px 8px;
+  cursor: pointer;
+  color: #bbb;
+  text-align: center;
+}
+
+.react-tabs__tab--selected {
+  background: #f8f9fa;
+  border-color: #1c1d1f;
+  border-left: 7px solid #c1f5ff;
+  color: black;
+}
+
+.react-tabs__tab-panel {
+  display: none;
+  width: 300px;
+}
+
+.react-tabs__tab-panel--selected {
+  display: block;
+  overflow: auto;
+  width: 250vh;
+  background: none !important;
+}
+
+.react-tabs__tab {
+  padding-left: 24px;
+}
+
+.react-tabs__tab--selected {
+  padding-left: 21px;
+}
+
+.footer {
+  background-image: url("https://res.cloudinary.com/dyx1jeydm/image/upload/v1661929261/Footer/image_hzwmyj.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.fill-window {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+}
+.panel-content {
+  object-fit: contain;
+}
+
+select {
+  background-color: rgba(255, 166, 0, 0.803);
+  border-radius: 15px;
+}
+select option {
+  background: red important;
+}
+a {
+  text-decoration: none;
+}
