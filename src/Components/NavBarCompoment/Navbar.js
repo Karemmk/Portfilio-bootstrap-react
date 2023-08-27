@@ -36,12 +36,12 @@ function NavBar() {
   return (
     <div id="navbar" className="mb-5 pb-5">
       <Navbar className="row mb-5" fixed="top border-bottom border-warning" color={darkMode?"secondary" :"light"} light expand="md">
-        <NavbarBrand className="row justify-between">
-          <div className="col-4 fw-bold fs-3 text-danger "> kaRem </div>
+        <NavbarBrand className="d-flex justify-between">
+          <div className="col-4 fw-bold fs-4 mt-2 ms-1 text-danger "> kaRem </div>
           <div className="col-3 mt-2 ">
             <Toggle />
           </div>
-          <div className="col-5 mt-1">
+          <div className="col-5 mt-2 ms-1">
             
           <Dropdown isOpen={dropdownOpen} toggle={toggle} >
       <DropdownToggle caret className='text-white' size="sm" color='warning'>

@@ -19,22 +19,23 @@ export default function Userinter({ traChk }) {
         <br />
         7-Windows,Linux,Mac
       </div>
-      <div className="col-12 col-md-3 offset-1 row  mt-md-3">
-        <div className="col-12  mt-3 mt-md-3 mb-5 mb-md-4 ">
-          <FloatingDiv
+      <div className="col-12 col-md-3 offset-1 row  mt-md-3 ">
+        <div className="col-12 mt-3 mt-md-3 mb-5 mb-md-4 position-relative">
+          <FloatingDiv 
+           
             image="https://res.cloudinary.com/dyx1jeydm/image/upload/v1661929669/About/boots_qqorxj.png"
             text1="Bootstrap "
             condition={true}
           />
         </div>
-        <div className="col-12 mt-5 mt-md-3 mb-5 pb-2 pb-md-0">
+        <div className="col-12 mt-5 mt-md-3 mb-5 pb-2 pb-md-0 position-relative">
           <FloatingDiv
             image="https://res.cloudinary.com/dyx1jeydm/image/upload/v1661929694/About/rectb_qfwx0v.png"
             text1="Reactstrap "
             condition={true}
           />
         </div>
-        <div className="col-12 mt-5 mt-md-3 mt-md-3">
+        <div className="col-12 mt-5 mt-md-3 mt-md-3  position-relative">
           <FloatingDiv
             image="https://res.cloudinary.com/dyx1jeydm/image/upload/v1661929693/About/Mui_ygoslx.png"
             text1="Matiral ui "

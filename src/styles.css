@@ -87,7 +87,7 @@
 
 .react-tabs__tab-panel--selected {
   display: block;
-  overflow: auto;
+  overflow: scroll !important;
   width: 250vh;
   background: none !important;
 }
@@ -114,6 +114,7 @@
 }
 .panel-content {
   object-fit: contain;
+  z-index: 50 !important;
 }
 
 select {

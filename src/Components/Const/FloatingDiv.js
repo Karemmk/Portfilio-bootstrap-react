@@ -8,11 +8,12 @@ const FloatingDiv = ({ image, text1, text2,condition }) => {
     return (
       <motion.div
        initial={{ left: condition? "" :"70%",
-       scale: condition? "0.5" : "",}}
+       }}
           whileInView={{ 
             left: condition?  "" : "57%" ,
-            scale: condition? "1.4" : "",}}
-          transition={transition}
+            width: condition? "10rem" : "",
+            }}           
+          transition={condition? "" : `${transition}`}
        className="d-flex p-1 justify-content-around rounded-pill  align-items-center position-absolute "
         style={{
         background: darkMode ? "#495057" : "#e9ecef",}}
