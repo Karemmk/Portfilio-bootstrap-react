@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
 import { Button } from "reactstrap";
 import CaRd from "./Const/CaRd";
 import { motion } from "framer-motion/dist/framer-motion";
@@ -6,6 +6,17 @@ import { useSelector } from "react-redux";
 
 const Services = () => {
   const traChk = useSelector((state) => state.translate.value);
+  const [info,setInfo] =useState([]);
+  
+  useEffect(() => {
+    fetch(
+        "https://karemmk.github.io/portfolio2api/portfolio2api.json"
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setInfo(data.about[0]);
+      });
+  }, [info]);
 
   return (
     <div className="row mt-5 pt-5" id="services">
@@ -38,8 +49,8 @@ const Services = () => {
           <a
             href={
               traChk
-              ? "https://drive.google.com/file/d/1Kbt1ydPTKZvxkK-RwyWb0Wfc-71Pe8cJ/view?usp=drivesdk"
-              : "https://drive.google.com/file/d/1KblqhiwcE2EdtbpgrQaUIvCAYA7z2O0Z/view?usp=drivesdk"  
+              ? `${info.cv_fr}`
+              : `${info.cv}` 
             }
             target="_blank"
             and

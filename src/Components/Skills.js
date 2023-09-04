@@ -69,10 +69,12 @@ export default function Skills() {
 
   
   useEffect(() => {
-    fetch("https://karemmk.github.io/Portfolio/myapi.json")
+    fetch(
+        "https://karemmk.github.io/portfolio2api/portfolio2api.json"
+    )
       .then((res) => res.json())
       .then((data) => {
-        setImages(data.images);
+        setImages(data.skills[0].images);
       });
   }, [images]);
 
