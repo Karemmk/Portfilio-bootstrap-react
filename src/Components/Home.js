@@ -31,7 +31,7 @@ const Home = () => {
 
         <div className="mx-5">
           <h3 className="fw-bold ">{traChk? 'Salut! je suis':'Hi! I am'}</h3>
-          <h2 className="fw-bold text-warning fs-1">Karem Mkacher</h2>
+          <h2 className="fw-bold text-warning fs-1">Karem Mekacher</h2>
           <p>
             <Typical
               loop={Infinity}
